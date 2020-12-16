@@ -4,7 +4,11 @@
     "require": {
         "klein/klein": "^2.1",
         "monolog/monolog": "^2.1",
-        "illuminate/database": "^8.18"
+        "illuminate/database": "^8.18",
+        "hassankhan/config": "^2.2",
+        "vlucas/phpdotenv": "^5.2",
+        "phpoption/phpoption": "^1.7",
+        "illuminate/view": "^8.19"
     },
     "autoload": {
         "psr-4": {

@@ -2,17 +2,20 @@
 
 namespace App\Controller;
 
-use App\Model\Inventario;
+use App\Model\User;
 
 class IndexController
 {
     public function index()
     {
-        return 'Hello World - Home';
+        return view('welcome', [
+            'executionTime' => number_format((microtime(true) - APP_START), 5),
+            'production' => rand(0, 1)
+        ]);
     }
 
-    public function inventario($id)
+    public function usuario($id)
     {
-        return $id ? Inventario::where('id', $id)->get() : Inventario::all();
+        return User::find($id);
     }
 }
